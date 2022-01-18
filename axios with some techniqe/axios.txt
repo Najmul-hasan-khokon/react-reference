@@ -1,0 +1,63 @@
+
+// kono ekta api theke data call korar age amder dekte hobe je server e data kon farmate e ache 
+    se onujai data get korte hobe. sob somoy data ek format e thakbe na , maximum time e json format e thakbe.
+    // abar etao dekte hobe data ta ki array hisabe naki object hisabe ache , se onujai state er default value dite hobe.
+
+// arekta jinis server e data load howar age component ta render hoy tar por data load hoye state ke update kore.
+    data load howar age jodi amra kono kichu access kori tahole undefined dekhabe and jeta undefined dekhabe
+     sei property er pore jodi . diye aro kichu access korte cai tahole error asbe.
+
+
+
+axios // eta fetch thekeo ektu advance.
+   amra jokhon data load er khetre data gulake ektu organize korte 
+    caibo tokhon axios diye seta amra khub easily korte pari.
+  // and fetch er cheye data load er khetre ektu beshi control pabo.
+        ebong sob data amra ekta data object e pabo sathe kichu header habi
+         jabi kichu pabo jegula amader kaje lagte pare. egula axios add kore dey.
+
+
+
+
+ import axios from 'axios'; // just axios ke import kore use korte parbo.
+
+  useEffect(()=>{
+    const url = 'https://newsapi.org/v2/everything?q=keyword&apiKey=04093e6ce01e4e5194c79410a05a826a';
+    axios(url)
+    .then(data => console.log(data))
+  },[])
+
+
+
+
+
+
+// axios with async await
+
+useEffect(()=> {
+
+ async function getApi(){
+  const data = await axios('https://newsapi.org/v2/everything?q=keyword&apiKey=04093e6ce01e4e5194c79410a05a826a')
+  console.log(data);
+ }
+
+ getApi()
+
+},[])
+
+
+
+
+// fetch with async await
+
+useEffect(()=> {
+
+ async function getApi(){
+  const res= await fetch('https://newsapi.org/v2/everything?q=keyword&apiKey=04093e6ce01e4e5194c79410a05a826a')
+  const data = await res.json()
+  console.log(data);
+ }
+
+ getApi()
+
+},[])

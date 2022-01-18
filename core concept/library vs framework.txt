@@ -1,0 +1,15 @@
+framework 
+__________
+  // framework oi gulake bola hoy jegula dekhte ektu boro ebong sekhane onek extra jinis thake
+       jeta tomi sob kichu use korte paro abar nao use korte paro.
+
+
+
+
+library
+________
+   // library hocce ektu choto type er jekhane basic ba dorkary jinis gula dewa ache
+       ebong segula maximum time e use korba.
+
+   // se jonno react er ektu subidai hocce eta ekta library kajai ektu choto
+        tai eta use korao easy.

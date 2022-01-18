@@ -1,0 +1,8 @@
+// react.
+useState()
+useEffect()
+
+
+// react-router-dom.
+useNavigate() // age useHistory() chilo v5 e.
+useParams()  // eta diye url peramiter er id ta recieve korte pari.

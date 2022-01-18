@@ -1,0 +1,74 @@
+// react theke ekta context make kore setake ekta variable e rakbo then setake export o kore dibo.
+   then context name .Provider diye parent component ke wrap kore dibo then children component theke
+    context take use kore access korte parbo. 
+     ta Chara context api diye amra sudu matro static value carao daynamic value o pass korte pari.
+
+
+// child theke jodi state change kori tahole pura context er value tai change hoye jabe. jekhane jekhane stake
+    set kora hoyeche. orthad amra je kono jayga theke state ba context er value change ba update korte parbo.
+    multiple jayga theke control korte parbo.
+
+
+// some steps.
+1 : context make korbo  // jekhane make korbo sekhane export kore dite hobe. jate onno component gula import kore use korte pare.
+2 : context.Provider diye wrap kore dibo , sathe ekta value o pass kore dibo.
+3 : context take import korbo
+4 : useContext takeo import korbo then context take tar peramiter e diye dibo.
+5 : then setake access korbo
+
+
+
+// value er modde amra ekadik value o pathaite pari. like ekta array dite pari 
+   tahole jeckhane context use korbo sekhane [] diye destructure kore nibo. like        
+       <context.Provider value={[count, setCount]}>
+           <Home/>
+       </context.Provider>
+      const [count, setCount] = useContext(contextValue); // jeheto eta array.
+
+
+
+    <context.Provider value="laptop"> 
+      <h1>this is app</h1>
+      <Home />
+    </context.Provider>
+
+
+
+
+// pass the context from parent component.
+import React from "react";
+import Home from "./components/pages/Home";
+
+export const context = React.createContext();
+
+const App = () => {
+  return (
+    <context.Provider value="laptop">
+      <h1>this is app</h1>
+      <Home />
+    </context.Provider>
+  );
+};
+
+export default App;
+
+
+
+
+
+// child component access the context.
+import { useContext } from "react";
+import { context } from "../../App";
+import User from "../User";
+
+const Home = () => {
+  const contexts = useContext(context);
+  return (
+    <div>
+      <h1>this is home {contexts}</h1>
+      <User />
+    </div>
+  );
+};
+
+export default Home;

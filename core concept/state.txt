@@ -1,0 +1,15 @@
+// 2 ba 3 level er upore props driling kora uchit na application complex hoye jay.
+     se khetre context use korbo.
+
+jodi amader emon mone hoy je kono ekta state amader ke onek gula component e pass korte hobe
+  tahole amra simply state take ektu uporer level e declare korbo , jate kore sei state take
+   tar ekadik children component e pass kore dite pari.
+orthad ekadik siblings e state pass korte hole state take tader parent e declare korbo, jate kore sokol
+  siblings e state khub easily pass kore dite pari.
+
+
+
+
+// emon khetre context api o use kora jay
+tobe jodi props gula beshi nested hoye jay tahole context api use kora better.
+ ete kore r props driling hobe na.

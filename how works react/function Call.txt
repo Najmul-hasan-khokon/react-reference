@@ -1,0 +1,13 @@
+
+//     <button type="button" onClick={() => handleAddProduct(product)}>
+          add to cart
+        </button>
+
+  maje modde amader emon hote pare je kono ekta function  call kore setar arguement ba () er modde peramiter add korte hote 
+    pare tokhon amader function ta instantly call hoye jay . ei problem ta solve korar jonno
+      amra call kora function tar age ekta arrow function declare kore dite pari.
+   // summery:: orthad kono ekta function jodi automatic call hoye jay tahole amra er age ekta arrow function dibo.
+
+
+   //  () => handleAddProduct(product)
+       first one is arrow function and last one is handleAddProduct function .

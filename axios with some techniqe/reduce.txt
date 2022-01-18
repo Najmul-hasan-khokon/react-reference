@@ -1,0 +1,32 @@
+
+// jodi amra sum ber korte cai . eta onekta loop er motoi kaj kore. reduce e 2ta peramiter dite hoy
+    first peramiter ekta callback func 2nd peramiter intial value.
+      // ekhane sum er default value 0. then num er ekta element asbe and sum er sathe jog hobe. then arekta asbe
+          and sum er sathe jog hobe. sob item ses hole ekta output return korbe.
+      
+  const nums = [12, 4,5,66,33]
+   const total = nums.reduce((sum , num)=> sum + num , 0)
+   console.log(total);
+
+
+
+
+  const nums = [12, 4,5,66,33]
+   const total = nums.reduce((sum , num)=> {  // multiline likte pari just return diye jog korbo.
+       return sum + num 
+   }, 0)
+   console.log(total);
+
+
+
+// another example with an object.
+__________________________________
+
+    const friends = [
+        {name: 'najmul', money: 50},
+        {name: 'rasel', money: 20},
+        {name: 'karim', money: 10},
+        {name: 'abul', money: 5},
+    ]
+   const total = friends.reduce((sum , friend)=> sum + friend.money , 0); // ekhane sum er sathe friend er money jog korci.
+   console.log(total); // 85

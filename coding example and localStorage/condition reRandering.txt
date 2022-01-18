@@ -1,0 +1,57 @@
+3vabe amra condition likte pari. 
+   1 : if , else diye.    // multiple condition set korte caile eta use korte pari.
+   2 : tarnery operator diye.     // eta diye 2ta condition set korte parbo. caile nested tarnery o use korte pari.
+   3 : logical and ba && operator diye.   // eta hocce jodi condition true hole ekta jinis dekhate cai.
+
+
+
+// parent component.
+import { useState } from "react";
+import User from "./components/User";
+
+const App = () => {
+  const [familiar, setFamiliar] = useState(false);
+
+  return (
+    <div>
+      <h2>Is Familiar : {familiar.toString()}</h2> // false ba true keyword take string e convert kore dekhaici.
+      <button onClick={() => setFamiliar(!familiar)}>Toggle Friend</button>   // !familiar dile true thakle false hobe and
+                                                                                   false thakle true hobe.
+      <User familiar={familiar} />  // pass familiar in child component.
+    </div>
+  );
+};
+
+export default App;
+
+
+
+
+// child component.
+const User = ({ familiar }) => {
+  let greetings;
+  if (familiar) {
+    greetings = <p>welcome , my friend</p>;
+  } else {
+    greetings = <p>who the hell are you?</p>;
+  }
+
+  return (
+    <div>
+      <div>
+        <h2>Greetings</h2>
+        {greetings}
+      </div>
+      <div>
+        <h2>Food</h2>
+        {familiar ? <p>i will buy food for you</p> : <p>lets eat his whose?</p>}
+      </div>
+      <div>
+        <h2>Connection</h2>
+        {familiar && <p>let's join my facebook</p>}
+      </div>
+    </div>
+  );
+};
+
+export default User;

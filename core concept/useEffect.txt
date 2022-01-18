@@ -1,0 +1,52 @@
+useEffect
+_________
+  useEffect name asce side effect theke . website bananor somoy amra external onek kichur 
+    upore defend kori. jemon kono ekta server theke data get , post, delete and update dite use korte hoy.
+  
+  // useEffect matro ekbaroi call hobe ebong setake call korte hoy na. react setake nijei 
+     call kore dey amra just useEffect define kore kono defendencies thakle dibo na thakle blank rekhe dibo.
+       defendences na dile loop er modde pore jabe. bar bar call hote thakbe.
+       useEffect(()=>{  },[]);
+
+
+
+
+
+
+// default value o set korte pari. just {jodi value na pay || eta hobe};
+
+
+
+
+
+
+
+
+
+
+import React, { useEffect, useState } from "react";
+
+function App() {
+  const [users, setUsers] = useState([]); // jeheto array niye kaj tai default e ekta empty array nilam.
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => setUsers(data))  // setUsers e data diye users take update kore dilam.
+      .catch((err) => console.log(err));
+  }, []); 
+
+
+  return (
+    <div className="App">
+      <h1>Dynamic Users: {users.length}</h1> // users.length diye sob gula user pabo.
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>{user.name}</li>  // ekhane ekta unique key dilam ebong li er vitore user er name set kore dilam.
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;

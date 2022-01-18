@@ -1,0 +1,16 @@
+
+// react muloto 2ta step e kaj kore 1 : hocce browser dom r onnota hocce vertual dom.
+
+
+// browser dom hocce final output jeta amra browser e dekte pai. r react application e jodi
+    kono ekta state change hoy tokhon vertual dom e previous state ebong updated state compare kore
+     updated value gulake browser dom ba actual dom e setake update ba reRender kore dey.
+       tokhon amra browser e stake dekhte pari.
+
+
+
+
+// react e vertual dom thakar karone kono ekta state change hole pura page take
+     reload korte hoy na. vertual dom er sahajje react buje pele je kon jaygay change hoice
+       ebong take kothay update korte hobe. tokon jototuko update hoice seta actual dome e reRender kore
+         dey ultimately amra output dekhte pari.

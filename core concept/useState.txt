@@ -1,0 +1,61 @@
+
+useState();
+____________
+  useState hocce react er ekta hook. jeta theke 2ta jinis destructure kora jay 
+     1- hocce current value , 2- hocce ekta setCurrent jeta ekta function jeta diye amra current value take
+        update kore dite pari. useState er peramiter e amra caile default kichu value diye dite pari.
+           // const [current, setCurrent] = useState(); 
+
+
+
+// amra caile setState take kono ekta function er vitore kaj taj kore event handle er vitore pass kore dite pari.
+    for example onClick={something}
+    abar direct event er vitoreo kaj kore pelte pari. just event er vitore ()=> diye setState  ke call korte hobe.
+     for example onClick={()=> setState()}
+
+
+
+
+
+// simple example with counter.
+  const [count, setCount] = useState(0);  // useState();
+
+  const increase = () => setCount(count + 1); // arrow function
+  const decrease = () => setCount(count - 1);
+
+
+// example -1.
+  <div className="App">
+    <h1>count: {count} </h1>
+      <button type="button" onClick={increase}> // increase button.
+        click me
+      </button>
+      <button type="button" onClick={decrease}> // decrease button.
+        click me
+      </button>
+   </div>
+
+
+// example -2.  // ei pettern eo call kora jaite pare.
+   <div className="App">
+      <h1>count: {count} </h1>
+      <button type="button" onClick={() => setCount(count + 1)}> // direct count ba current value er sathe 1 jog korci.
+        click me
+      </button>
+      <button type="button" onClick={() => setCount(count - 1)}> // direct count er sathe 1 biyug korci.
+        click me
+      </button>
+    </div>
+
+
+
+// example - 3.
+ <div className="App">
+      <h1>count: {count} </h1>
+      <button type="button" onClick={() => setCount((prev) => prev + 1)}> // eta defference hocce previous value er sathe 1 jog korci.
+        click me
+      </button>
+      <button type="button" onClick={() => setCount((prev) => prev - 1)}> // eta previous value er sathe 1 biyug korci.
+        click me
+      </button>
+    </div>

@@ -1,0 +1,6 @@
+react-bootstrap bootstrap // eta ke install kore index.js e import kore react-bootstrap er 
+                               component gula use korte parbo.
+
+
+material ul            // etao react-bootstrap er moto just component gula use korlei hobe. ta chara icon font o use korte pari.
+recharts // chart er jonno

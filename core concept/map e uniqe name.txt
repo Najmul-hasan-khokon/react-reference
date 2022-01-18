@@ -1,0 +1,5 @@
+// jei name ba property ta onno kono name ba propery er sathe match korbe na seta ke uniqe key
+      nite hobe. betikrom kono id ba name na thakle key={Math.random(mapItem)};  use korte pari.
+
+
+// jekhane map korbo sekhanei key ta dite hobe. onno kono page e dile hobe na.

@@ -1,0 +1,11 @@
+// jokhon amra kono ekta event handler set korbo. age dekbo seta imfect ki ekta specipic component e
+  kina , naki bahirer component e impect porbe. 
+   // jodi impect specipic component e thake tahole event handler ta thik oi componentei declare korbo.
+
+   // r jodi outer component e impect pore tahole eder paren component e event handler ta declare korbo.
+      jeheto amader ke data gula ek component theke onno  component e pass kore use korte hobe.
+       ta chara child component theke paren component e data pathano jay na. tai paren e declare korte hobe.  
+
+
+
+// kono jay gay jodi data change howar asonkha thake tahole amra ekta state declare kore pelbo.

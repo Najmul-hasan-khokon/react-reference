@@ -1,0 +1,9 @@
+// reduce function 2ta peramiter ney . 1: call backFunction 2: current ba initial value.
+      abar callBack fucntion ta 2 ta peramiter ney jei kono name hote pare then return hisabe oita 2ta jog kore dilei hobe.
+    arra.reduce(sum, country)=> sum + country.population, 0 );   callBack er peramiter gula jei kono name nite pari.  ( anyName , currentValue)
+       
+
+  const totalPopulation = addCountry.reduce(
+    (sum, country) => sum + country.population,
+    0
+  );

@@ -1,0 +1,75 @@
+// amra caile khub easily kono ekta componet ba function ke return korar age
+   array ba object declare kore sekhane kaj taj kore.
+       jsx er vitore {} diye er vitore daynamik value dite pari.
+
+
+
+// react e je kono jaygay daynamik value dite hole {} er vitore dite hoy ta na hole error asbe.
+   {} er vitore map habi jabi aro onek kichu kora jay.
+
+
+
+
+// amra caile kono ekta element er upore map caliye jei item gula pabo
+    setake arekta componet ba function er peramiter hisabe pass kore dite pari.
+
+
+// daynamik valuer vitoreo abar daynamik value likha jay. just {} diye diye daynamik value likte hoy.
+      
+
+
+// example - 1.
+
+ <ul>
+       {friends.map((friend) => (
+          <li>{friend}</li>
+        ))}
+  </ul>
+
+
+
+
+
+// example - 2.   ekhane 2bar daynamik value likci tai 2bar {} diyechi.
+
+ <ul>
+       {friends.map((friend) => <AnotherFunc friend={friend} /> )}  // arekta func er arguement e send korci.
+  </ul>
+
+
+
+
+// example - 3 with array and object
+
+function Test() {
+  const products = [
+    { name: "laptop", price: "222taka" },
+    { name: "phone", price: "111tak" },
+  ];
+
+  const friends = ["najmul", "rasel", "abul", "kalam", "mujammel", "sha alam"];
+
+  const productStyle = {
+    width: "103px",
+    color: "red",
+    padding: "22px",
+    margin: "22px auto",
+  };
+
+  return (
+    <div className={productStyle.color} style={productStyle}>
+      <ul>
+        {friends.map((friend) => (
+          <li>{friend}</li>
+        ))}
+      </ul>
+      <ul>
+        {products.map((product) => (
+          <li>{product.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;

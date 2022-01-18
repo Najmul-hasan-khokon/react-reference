@@ -1,0 +1,17 @@
+  
+
+ const defaultValue = 'hi my name is najmul hasan'
+    const [show, setShow] = useState(defaultValue)
+
+    const hideAndShowHandler = ()=>{
+        if(show){
+           setShow('')
+        }else{
+            setShow(defaultValue)
+        }
+    }
+
+
+
+             <h4>{show}</h4>
+            <button onClick={hideAndShowHandler }>{show ? 'hide me' : 'show me'}</button>

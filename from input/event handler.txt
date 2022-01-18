@@ -1,0 +1,17 @@
+onClick={}  // kono jaygay click korte hole.
+onChange={}  // input field e data change hole. 
+        // input field er data nite pari . e.target. er pore value, type, name , id , placeholder nite pari jeta dorkar.
+
+
+onSubmit={}  // form submit korte hole.
+
+
+onBlur={} // eta input e kichu likhe input theke focous out hole side ekta border type hoye jabe.
+
+
+
+regular expresion shikte hobee. eta diye amra email and password validate korte pari. koyta character hobe , charecter er modde
+    ki kono number hobe kina ba kono special charecter hobe kina, koyta number dite hobe, character gula ki upercase hobe naki lowercase
+       hobe etc.... hote pare.
+
+ /\S+@\S+\.\S+/.test('najmul@gmail.com') 

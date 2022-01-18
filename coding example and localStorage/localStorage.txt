@@ -1,0 +1,71 @@
+// localStorage theke delete hole reload korleo amra r sei data pabona eta server theke reload hoye jabe.
+// abar localStorage er maddome kichu add kore reload korleo seta theke jabe server e . 
+// localStorage e data gula set korle json format e thakbe segulake read korte hole JSON.parse() ba object e convert kore nite hobe.
+   
+
+
+first example
+_____________________
+
+import React, { useState } from "react";
+
+const App = () => {
+  const [name, setName] = useState("");
+
+  const done = () => {
+    localStorage.setItem("Name", name); // property and value.
+  };
+
+  const result = localStorage.getItem("Name"); // only property.
+
+
+ const remove = () => {
+    localStorage.removeItem("Name");
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input type="submit" onClick={done} />
+     <input type="submit" onClick={remove} />
+
+      {
+        <div>
+          Name: <span>{result}</span>  // local e set kore reload dilo get hobe browser e.
+        </div>
+      }
+    </div>
+  );
+};
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+ const getLocalItems = () => {
+    let list = localStorage.getItem("list");  // eta kichu na just localstorage e ki ki ache seta mone rakhar jonno.
+    if (list) {
+      return JSON.parse(localStorage.getItem("list"));
+    } else {
+      return [];
+    }
+  };
+  const [remove, setRemove] = useState(getLocalItems());
+  console.log(remove);
+
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(userName));
+  }, [userName]);
