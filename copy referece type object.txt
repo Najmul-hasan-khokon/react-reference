@@ -1,0 +1,73 @@
+immutably ba deeply kono kichu copy korte gele lodash er _ diye korte pari.   _ eta ekta object
+          _. dile kichu property ba method pabo jekhane just array ba object ta pass kore dibo. 
+multi dimensional kono kichu copy korte lodash use korte hobe , ta na hole deeply copy hobe na.
+
+ import _ from "lodash";
+
+
+ const num = ["najmul", "rasel", "abul"];  // array cloning ba copy.
+  const result = _.cloneDeep(num);
+  result.push("kamal");
+  console.log(result);
+  num.pop();
+  console.log(num);
+
+
+// answer.
+ ['najmul', 'rasel', 'abul', 'kamal']
+ [Home.js:26 (2) ['najmul', 'rasel']
+ [Home.js:24 (4) ['najmul', 'rasel', 'abul', 'kamal']
+ [Home.js:26 (2) ['najmul', 'rasel']
+
+
+
+// spread operator , slice, for loop, map , filter diye shallow ba unDeep copy korte pari.
+
+
+
+
+ object immutibly copy ba cloning
+____________________________________
+
+  const num = {
+    name: "najmul",
+    age: 21,
+  };
+
+  const num2 = _.cloneDeep(num);
+
+  num.name = "kamal";
+  num.sellery = "1200taka";
+  console.log(num);
+
+  console.log(num2);
+
+// answer.
+{name: 'kamal', age: 21, sellery: '1200taka'}  
+Home.js:33 {name: 'najmul', age: 21}
+Home.js:31 {name: 'kamal', age: 21, sellery: '1200taka'}
+Home.js:33 {name: 'najmul', age: 21}
+
+
+
+
+// Mutable vs Immutable Data Types
+Mutable:
+________
+
+object
+array
+function
+
+
+
+
+All primitives are immutable.
+_____________________________
+
+string
+number
+boolean
+null
+undefined
+symbol

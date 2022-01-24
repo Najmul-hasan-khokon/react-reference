@@ -1,0 +1,38 @@
+// firebase kono user er kach theke input niye firebase e signup kore setake login o kore dey.
+    and currentUser take user er localStorage e rekhe dey , jate browser reload dileo user er
+     imformation ba authantication hariye na jay.
+// firebase er function gula asynchronous way te kaj kore jeheto user signup ba login korar somoy
+    instently signup ba login hobe na , segula promise return kore, tai async await kore nite hobe
+     jekhane wait dorkar hobe.
+
+
+// createUserWithEmailAndPassword , updateProfile
+firebase e signup korar somoy amra ja icca tai pass korte parbo na. just email and password pass korte parbo
+  sathe ekta username pass korte parbo jokhon signup hobe tar por updateProfile korar somoy displayName er value
+  hisabe username take pass kore dibo.
+  then auth.currentUser er modde user er value gula thake. setake niye amader currentUser namok local state 
+   baniye user take setCurrentUser er pass kore dibo , tobe seta immutably korbo.
+
+
+// signinWithEmailAndPassword -- signin ba login korar somoy function take call korbo.
+    ei function e email and passrod pass kore dilei ses.
+      and setake return kore dibo jate amra login korar pore app e sob kichu peye jai
+
+
+
+
+// signOut   -- signout korar somoy
+    ei function just auth take pass kore dilei hobe.
+
+
+
+// sob sese user jokhon ekbar signup kore abar signOut korbe tar por abar login korbe , tokhon user er
+    state ta change hoy. jokhon state change ba update hobe seta application e janan ba update korar jonno
+      firebase er ekta function ba eventlistner ache // onAutStateChange() nomok.
+
+eta jeheto side effect tai useEffect er vitore use korbo , then auth and user er information take peramiter hisabe
+ pass kore amader local state setCurrentUser er modde pass kore dibo.
+  jate kore user login korle state change hole tar information ta app dekhate pari and logout korle
+   setakeo loggeOut user dekhabe.
+  
+     
